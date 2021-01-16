@@ -77,11 +77,12 @@ export default class App extends Component {
           <h1>Телефонная книга</h1>
           <Form handleSubmit={this.handleSubmitForm} />
           <h2>Контакты</h2>
-          {/* {visibleConatacts.length > 1 && (<Filter filter={this.state.filter} handleFilterChange ={ this.handleFilterChange  } />) } */}
-          <Filter
-            filter={this.state.filter}
-            handleFilterChange={this.handleFilterChange}
-          />
+          {this.state.contacts.length > 1 && (
+            <Filter
+              filter={this.state.filter}
+              handleFilterChange={this.handleFilterChange}
+            />
+          )}
           <ContactsList contacts={visibleConatacts} onDelete={this.onDelete} />
         </div>
       </Container>
