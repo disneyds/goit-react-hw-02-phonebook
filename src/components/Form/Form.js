@@ -28,6 +28,7 @@ export default class Form extends Component {
             type="text"
             name="name"
             onChange={this.handleChange}
+            value={this.state.name}
             placeholder="Имя"
             className={s.input}
           ></input>
@@ -37,6 +38,7 @@ export default class Form extends Component {
             type="tel"
             name="number"
             onChange={this.handleChange}
+            value={this.state.number}
             placeholder="Телефон"
             className={s.input}
           ></input>
